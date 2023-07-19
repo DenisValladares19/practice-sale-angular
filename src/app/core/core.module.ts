@@ -4,6 +4,8 @@ import { ProductComponent } from './page/product/product.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
 import { CoreRoutingModule } from './core-routing.module';
 import { ProductDetailComponent } from './page/product-detail/product-detail.component';
+import { QuantityComponent } from './components/quantity/quantity.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -11,11 +13,13 @@ import { ProductDetailComponent } from './page/product-detail/product-detail.com
   declarations: [
     ProductComponent,
     CardProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    QuantityComponent
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    SharedModule
   ]
 })
 export class CoreModule { }
