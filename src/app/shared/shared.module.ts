@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ButtonComponent } from './button/button.component';
 import { InputComponent } from './input/input.component';
+import { FormatPricePipe } from './pipes/format-price.pipe';
 
 
 
@@ -14,7 +15,8 @@ import { InputComponent } from './input/input.component';
     FooterComponent,
     LayoutComponent,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    FormatPricePipe
   ],
   imports: [
     CommonModule
@@ -22,7 +24,8 @@ import { InputComponent } from './input/input.component';
   exports: [
     LayoutComponent,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    FormatPricePipe
   ]
 })
 export class SharedModule { }
