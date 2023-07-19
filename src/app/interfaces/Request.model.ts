@@ -1,5 +1,9 @@
 export enum methodEnum {
-  "GET", "POST", "PUT", "DELETE", "PATCH"
+  "GET" = "GET",
+  "POST" = "POST",
+  "PUT" = "PUT",
+  "DELETE" = "DELETE",
+  "PATCH" = "PATCH"
 };
 
 export type params = {[k: string]: string};
