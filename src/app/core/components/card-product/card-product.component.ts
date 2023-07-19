@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'dv-card-product',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-product.component.scss']
 })
 export class CardProductComponent {
-
+  @Input() name?: string;
+  @Input() price?: number;
+  @Input() providerName?: string;
+  @Input() id?: number;
+  @Input() image?: string;
 }
