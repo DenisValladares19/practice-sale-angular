@@ -1,7 +1,9 @@
 <div class="flex flex-col h-screen w-screen justify-between items-center">
-  <dv-header></dv-header>
-  <main class="px-10 container-layout w-screen max-w-[1200px]">
-    <ng-content></ng-content>
+  <dv-header class="fixed"></dv-header>
+  <main class="px-10 pt-[68px] container-layout w-screen max-w-[1200px] pb-4 flex flex-col">
+    <div class="flex-grow-[1]">
+      <ng-content></ng-content>
+    </div>
+    <dv-footer></dv-footer>
   </main>
-  <dv-footer></dv-footer>
 </div>
