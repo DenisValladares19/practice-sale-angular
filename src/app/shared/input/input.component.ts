@@ -2,7 +2,7 @@ import { Component, Input, forwardRef } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 type types = "input" | "textarea" | "password" | "number" | "email";
-type keysErrors = "required" | "email" | "numbers";
+type keysErrors = "required" | "email" | "minlength";
 
 interface ObjectErrors {
   [key: keysErrors | string]: boolean
@@ -67,12 +67,16 @@ export class InputComponent implements ControlValueAccessor {
     if (!errors) return [];
     if (Object.keys(errors).length === 0) return [];
 
-    return Object.keys(errors).map((key) => this.getTraduction(key as keysErrors));
+    return Object.keys(errors).map((key) => this.getTraduction(key as keysErrors, errors[key]));
   }
 
-  getTraduction(error: keysErrors): string {
+  getTraduction(error: keysErrors, value: any): string {
     if (error === 'required') return "Campo requerido";
     if (error === 'email') return "El correo electrónico no es valido";
+    if (error === 'minlength') {
+      const { requiredLength,  actualLength } = value;
+      return `Debes ingresar al menos ${requiredLength} caracteres, llevas ${actualLength}`;
+    }
     return '';
   }
 
