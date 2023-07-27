@@ -1,7 +1,7 @@
 import { Component, Input, forwardRef } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-type types = "input" | "textarea" | "password" | "number" | "email";
+type types = "input" | "textarea" | "password" | "number" | "email" | "date";
 type keysErrors = "required" | "email" | "minlength";
 
 interface ObjectErrors {
