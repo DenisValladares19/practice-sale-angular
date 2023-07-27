@@ -6,6 +6,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { ButtonComponent } from './button/button.component';
 import { InputComponent } from './input/input.component';
 import { FormatPricePipe } from './pipes/format-price.pipe';
+import { LoadingComponent } from './loading/loading.component';
 
 
 
@@ -16,7 +17,8 @@ import { FormatPricePipe } from './pipes/format-price.pipe';
     LayoutComponent,
     ButtonComponent,
     InputComponent,
-    FormatPricePipe
+    FormatPricePipe,
+    LoadingComponent
   ],
   imports: [
     CommonModule
