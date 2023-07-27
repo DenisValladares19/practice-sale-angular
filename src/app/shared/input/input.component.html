@@ -1,1 +1,22 @@
-<p>input works!</p>
+<div class="flex flex-col">
+  <label
+    [ngClass]="{'text-red-500': isError()}"
+  >
+    {{ label }} <span *ngIf="isRequired()" class="text-sm text-red-600">*</span>
+  </label>
+  <input
+    [type]="typeInput"
+    [value]="value"
+    [className]="getClassName()"
+    [placeholder]="placeholder"
+    [required]="required"
+    [readOnly]="readOnly || disabled"
+    (input)="onInputChange($event)"
+  >
+  <div *ngIf="isError()">
+    <p
+      class="mt-2 text-xs text-red-600 dark:text-red-500"
+      *ngFor="let error of getListErrors(control?.errors)"
+    >{{ error }}</p>
+  </div>
+</div>

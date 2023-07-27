@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+// Components
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ButtonComponent } from './button/button.component';
 import { InputComponent } from './input/input.component';
-import { FormatPricePipe } from './pipes/format-price.pipe';
 import { LoadingComponent } from './loading/loading.component';
 
+// pipes
+import { FormatPricePipe } from './pipes/format-price.pipe';
 
 
 @NgModule({
@@ -18,10 +22,11 @@ import { LoadingComponent } from './loading/loading.component';
     ButtonComponent,
     InputComponent,
     FormatPricePipe,
-    LoadingComponent
+    LoadingComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     LayoutComponent,
