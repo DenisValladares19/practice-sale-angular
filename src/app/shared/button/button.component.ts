@@ -12,6 +12,7 @@ export class ButtonComponent {
   @Input() align: "start" | 'center' = 'center';
   @Input() loading: boolean = false;
   @Input() disabled: boolean = false;
+  @Input() htmlType: "button" | "reset" | "submit" = "button";
 
 
   public getClassNameByType(): string {
