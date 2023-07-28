@@ -1,1 +1,62 @@
-<p>signup works!</p>
+<div class="flex flex-col mt-5" [formGroup]="form">
+  <h3 class="text-2xl text-slate-700">Registrate</h3>
+  <p class="text-sm">Por favor ingresa tu información personal para crear tu cuenta</p>
+
+  <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <dv-input
+      formControlName="name"
+      label="Nombre"
+      placeholder="Ingresar"
+      [control]="form.controls['name']"
+    ></dv-input>
+
+    <dv-input
+      formControlName="lastname"
+      label="Apellido"
+      placeholder="Ingresar"
+      [control]="form.controls['lastname']"
+    ></dv-input>
+
+    <dv-input
+      formControlName="age"
+      label="Edad"
+      placeholder="Ingresar"
+      [control]="form.controls['age']"
+      [typeInput]="'number'"
+    ></dv-input>
+
+    <dv-input
+      formControlName="birthDay"
+      label="Fecha de nacimiento"
+      placeholder="Ingresar"
+      [control]="form.controls['birthDay']"
+      [typeInput]="'date'"
+    ></dv-input>
+
+    <dv-input
+      formControlName="email"
+      label="Correo electrónico"
+      placeholder="Ingresar"
+      [control]="form.controls['email']"
+      [typeInput]="'email'"
+    ></dv-input>
+
+    <dv-input
+      formControlName="password"
+      label="Contraseña"
+      placeholder="Ingresar"
+      [control]="form.controls['password']"
+      [typeInput]="'password'"
+    ></dv-input>
+  </div>
+
+    <div class="flex  flex-col-reverse sm:flex-row justify-center mt-5 items-center gap-5">
+      <dv-button routerLink="#" [type]="'link'">CANCELAR</dv-button>
+      <dv-button
+        class="w-full sm:w-auto"
+        [loading]="loading"
+        [htmlType]="'submit'"
+        (click)="onSubmit()"
+      >GUARDAR</dv-button>
+    </div>
+</div>
