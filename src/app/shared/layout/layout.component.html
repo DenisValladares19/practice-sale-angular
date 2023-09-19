@@ -1,4 +1,4 @@
-<div class="flex flex-col h-screen w-screen justify-between items-center">
+<div class="flex flex-col rel h-screen w-screen justify-between items-center">
   <dv-header class="fixed z-10"></dv-header>
   <main class="px-10 mt-[68px] relative container-layout w-screen max-w-[1200px] pb-4 flex flex-col">
     <div class="flex-grow-[1]">
@@ -6,5 +6,6 @@
     </div>
     <dv-footer></dv-footer>
     <dv-loading *ngIf="loading"></dv-loading>
+    <dv-toast></dv-toast>
   </main>
 </div>

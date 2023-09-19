@@ -12,6 +12,7 @@ import { LoadingComponent } from './loading/loading.component';
 
 // pipes
 import { FormatPricePipe } from './pipes/format-price.pipe';
+import { ToastComponent } from './toast/toast.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormatPricePipe } from './pipes/format-price.pipe';
     InputComponent,
     FormatPricePipe,
     LoadingComponent,
+    ToastComponent,
   ],
   imports: [
     CommonModule,
